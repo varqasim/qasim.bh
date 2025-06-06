@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-family-sans: Inter, system-ui, sans-serif;
+  --animate-spin-slow: spin 20s linear infinite;
+}
