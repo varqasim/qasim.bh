@@ -73,12 +73,6 @@ function App() {
                 Services
               </a>
               <a
-                href="#portfolio"
-                className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-              >
-                Portfolio
-              </a>
-              <a
                 href="#about"
                 className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
               >
@@ -120,12 +114,6 @@ function App() {
                   Services
                 </a>
                 <a
-                  href="#portfolio"
-                  className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
-                >
-                  Portfolio
-                </a>
-                <a
                   href="#about"
                   className="text-gray-700 hover:text-gray-900 transition-colors font-medium"
                 >
@@ -154,25 +142,16 @@ function App() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left side - Social links */}
             <div className="hidden lg:flex flex-col space-y-6 absolute left-6 top-1/2 transform -translate-y-1/2">
-              <button
-                className="p-3 hover:bg-gray-100 rounded-full transition-colors group"
-                onClick={() =>
-                  window.open(
-                    "https://www.linkedin.com/in/qasim-albaqali-0000000000000000000000000000000000000000/",
-                    "_blank"
-                  )
-                }
-              >
+            <button className="text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="https://www.linkedin.com/in/qasim-albaqali/">
                 <LinkedinIcon size={20} />
-              </button>
-              <button
-                className="p-3 hover:bg-gray-100 rounded-full transition-colors group"
-                onClick={() =>
-                  window.open("https://github.com/varqasim", "_blank")
-                }
-              >
+              </a>
+            </button>
+            <button className="text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="https://github.com/varqasim">
                 <GithubIcon size={20} />
-              </button>
+              </a>
+            </button>
             </div>
 
             {/* Center - Hero content */}
@@ -253,7 +232,7 @@ function App() {
         </section>
 
         {/* Services Section */}
-        <section id="services" className="max-w-7xl mx-auto px-6 py-20">
+        <section id="about" className="max-w-7xl mx-auto px-6 py-20">
           <div className="text-center mb-16">
             <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
               What I Do
@@ -370,61 +349,6 @@ function App() {
           </div>
         </section>
 
-        {/* Services Section */}
-        <section id="services" className="max-w-7xl mx-auto px-6 py-20">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Most MVPs Fail Before They Scale
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              You have a brilliant idea and the drive to make it happen. But
-              here's what most non-technical founders discover too late
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              {
-                title: "Architecture Pitfalls",
-                description:
-                  "73% of startups rebuild their entire tech stack within the first year due to poor initial architecture.",
-                icon: <AlertCircleIcon className="w-8 h-8 text-red-600" />,
-              },
-              {
-                title: "Technical Debt",
-                description:
-                  "Speed-to-market shouldn't mean technical shortcuts that cost you 6 months (and thousands of dollars) later.",
-                icon: <ZapIcon className="w-8 h-8 text-yellow-600" />,
-              },
-              {
-                title: "Investor-Ready Scalability",
-                description:
-                  "Investors ask tough technical questions about scalability during funding rounds that can make or break your pitch.",
-                icon: <DollarSignIcon className="w-8 h-8 text-green-600" />,
-              },
-              {
-                title: "First Hire Impressions",
-                description:
-                  "Your first technical hire will judge your startup based on the quality (or lack thereof) of your existing codebase.",
-                icon: <UserIcon className="w-8 h-8 text-blue-600" />,
-              },
-            ].map((service, index) => (
-              <div
-                key={index}
-                className="bg-white p-8 rounded-2xl shadow-sm hover:shadow-md transition-shadow border border-gray-100"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                  {service.title}
-                </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {service.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         {/* CTA Section */}
         <section className="max-w-7xl mx-auto px-6 py-20">
           <div className="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-12 lg:p-16 text-center text-white">
@@ -441,7 +365,7 @@ function App() {
         </section>
       </main>
 
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <section id="services" className="max-w-7xl mx-auto px-6 py-20">
         <div className="text-center mb-16">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             Three Ways We Help Startups Scale
@@ -489,15 +413,6 @@ function App() {
                 </span>
               </li>
             </ul>
-
-            <div className="border-t border-gray-200 pt-6">
-              <div className="flex items-baseline space-x-2 mb-2">
-                <span className="text-2xl font-bold text-gray-900">
-                  Starting at $15,000
-                </span>
-              </div>
-              <p className="text-gray-500 text-sm">8-12 weeks</p>
-            </div>
           </div>
 
           {/* Scale Readiness Assessment */}
@@ -538,13 +453,6 @@ function App() {
                 </span>
               </li>
             </ul>
-
-            <div className="border-t border-gray-200 pt-6">
-              <div className="flex items-baseline space-x-2 mb-2">
-                <span className="text-2xl font-bold text-gray-900">$2,500</span>
-              </div>
-              <p className="text-gray-500 text-sm">1 week turnaround</p>
-            </div>
           </div>
 
           {/* Engineering Excellence Upgrade */}
@@ -585,15 +493,6 @@ function App() {
                 </span>
               </li>
             </ul>
-
-            <div className="border-t border-gray-200 pt-6">
-              <div className="flex items-baseline space-x-2 mb-2">
-                <span className="text-2xl font-bold text-gray-900">
-                  Custom pricing
-                </span>
-              </div>
-              <p className="text-gray-500 text-sm">4-8 weeks</p>
-            </div>
           </div>
         </div>
       </section>
@@ -642,14 +541,14 @@ function App() {
               </div>
 
               {/* Calendly Iframe */}
-              <div className="w-full h-96 rounded-xl overflow-hidden border border-gray-200">
+              <div className="w-full rounded-xl overflow-hidden border border-gray-200">
                 <iframe
-                  src="https://calendly.com/qasim-albaqali/30min"
+                  src="https://calendly.com/varellaio/discovery-call?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1a1a&text_color=d3d3d3&primary_color=a58fcc"
                   width="100%"
-                  height="100%"
+                  height="700px"
                   frameBorder="0"
-                  title="Schedule a meeting"
-                  className="w-full h-full"
+                  title="Schedule a call with varella"
+                  className="min-h-[650px] md:min-h-[700px]"
                 ></iframe>
               </div>
 
@@ -790,14 +689,15 @@ function App() {
           </div>
           <div className="flex space-x-6">
             <button className="text-gray-600 hover:text-gray-900 transition-colors">
-              <LinkedinIcon size={20} />
+              <a href="https://www.linkedin.com/in/qasim-albaqali/">
+                <LinkedinIcon size={20} />
+              </a>
             </button>
-            <a
-              href="#"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              <LinkedinIcon size={20} />
-            </a>
+            <button className="text-gray-600 hover:text-gray-900 transition-colors">
+              <a href="https://www.linkedin.com/in/qasim-albaqali/">
+                <GithubIcon size={20} />
+              </a>
+            </button>
           </div>
         </div>
         <div className="text-center mt-8 text-gray-500">
